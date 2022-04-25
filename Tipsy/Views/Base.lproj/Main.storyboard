@@ -39,7 +39,7 @@
                                                             <color key="titleColor" systemColor="systemGreenColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHz-f1-U4x"/>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcg-1f-0DQ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgs-Xx-aOz">
@@ -51,7 +51,7 @@
                                                             <color key="titleColor" systemColor="systemGreenColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbh-sI-V1w"/>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vw3-cz-mAc"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNg-cB-tiv">
@@ -62,7 +62,7 @@
                                                             <color key="titleColor" systemColor="systemGreenColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u32-eR-pBc"/>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DrZ-rt-Fmt"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -82,10 +82,10 @@
                                                         <color key="textColor" systemColor="systemGreenColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6PR-aQ-kRI">
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="6PR-aQ-kRI">
                                                         <rect key="frame" x="47.5" y="0.0" width="94" height="32"/>
                                                         <connections>
-                                                            <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N9d-eO-99L"/>
+                                                            <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Oul-qf-zLs"/>
                                                         </connections>
                                                     </stepper>
                                                 </subviews>
@@ -127,7 +127,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2eC-my-RYc"/>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4P0-4S-fvj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,12 +147,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="billTExtField" destination="0WL-fH-C9s" id="1If-jU-Hlz"/>
-                        <outlet property="dasda" destination="0WL-fH-C9s" id="UmM-Xn-VzD"/>
-                        <outlet property="splitNumberLabel" destination="Yxd-U1-Qmj" id="YsZ-eY-4MP"/>
-                        <outlet property="tenPctButton" destination="hgs-Xx-aOz" id="Lsg-Vh-eoi"/>
-                        <outlet property="twentyPctButton" destination="WNg-cB-tiv" id="Q7w-kb-yFa"/>
-                        <outlet property="zeroPctButton" destination="8iy-hj-tBR" id="ncm-pU-8cu"/>
+                        <outlet property="billTextField" destination="0WL-fH-C9s" id="hmn-Hd-JZG"/>
+                        <outlet property="splitNumberLabel" destination="Yxd-U1-Qmj" id="xZE-C5-kC6"/>
+                        <outlet property="tenPctButton" destination="hgs-Xx-aOz" id="DeG-FS-Wvz"/>
+                        <outlet property="twentyPctButton" destination="WNg-cB-tiv" id="bSv-8K-aFj"/>
+                        <outlet property="zeroPctButton" destination="8iy-hj-tBR" id="lnl-0x-htF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -222,8 +221,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="settingsLabel" destination="sYe-jv-HTO" id="7AE-yX-DIt"/>
-                        <outlet property="totalLabel" destination="DWk-vB-SfA" id="cdH-5S-Gno"/>
+                        <outlet property="settingsLabel" destination="sYe-jv-HTO" id="kmY-9p-gZE"/>
+                        <outlet property="totalLabel" destination="DWk-vB-SfA" id="wO6-Io-7Mq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C69-3O-KW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
