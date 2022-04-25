@@ -152,6 +152,7 @@
                         <outlet property="tenPctButton" destination="hgs-Xx-aOz" id="DeG-FS-Wvz"/>
                         <outlet property="twentyPctButton" destination="WNg-cB-tiv" id="bSv-8K-aFj"/>
                         <outlet property="zeroPctButton" destination="8iy-hj-tBR" id="lnl-0x-htF"/>
+                        <segue destination="LiK-4G-r9Z" kind="presentation" identifier="goToResult" id="8sw-MU-OWb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,19 +164,22 @@
             <objects>
                 <viewController id="LiK-4G-r9Z" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J95-DM-Kzk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOC-ab-XOw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOC-ab-XOw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWk-vB-SfA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWk-vB-SfA">
                                         <rect key="frame" x="186.5" y="134" width="43" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="pjG-au-xL2"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdM-eC-Xhk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdM-eC-Xhk">
                                         <rect key="frame" x="84" y="70" width="246" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -184,14 +188,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.82272800574965044" green="1" blue="0.82605624250482712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="DWk-vB-SfA" firstAttribute="top" secondItem="GdM-eC-Xhk" secondAttribute="bottom" constant="21" id="5eZ-ZC-tbt"/>
+                                    <constraint firstItem="DWk-vB-SfA" firstAttribute="top" secondItem="HOC-ab-XOw" secondAttribute="top" constant="134" id="Bq1-Jh-AMr"/>
                                     <constraint firstItem="DWk-vB-SfA" firstAttribute="centerX" secondItem="HOC-ab-XOw" secondAttribute="centerX" id="T9x-VL-quE"/>
                                     <constraint firstItem="GdM-eC-Xhk" firstAttribute="centerX" secondItem="HOC-ab-XOw" secondAttribute="centerX" id="jDs-7T-gsW"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1B-u7-yEH">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1B-u7-yEH">
                                 <rect key="frame" x="111" y="801" width="193" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="dGx-X2-zkW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Recalculate">
@@ -201,7 +209,7 @@
                                     <action selector="recalculate:" destination="LiK-4G-r9Z" eventType="touchUpInside" id="6OS-DH-0DI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Split between 2 poeple with 10% tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYe-jv-HTO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 poeple with 10% tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYe-jv-HTO">
                                 <rect key="frame" x="15.5" y="333" width="383" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -212,12 +220,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HOC-ab-XOw" firstAttribute="centerX" secondItem="J95-DM-Kzk" secondAttribute="centerX" id="1PD-lR-gfZ"/>
+                            <constraint firstItem="sYe-jv-HTO" firstAttribute="centerX" secondItem="T1B-u7-yEH" secondAttribute="centerX" id="1Wz-2y-d6O"/>
                             <constraint firstItem="HOC-ab-XOw" firstAttribute="top" secondItem="J95-DM-Kzk" secondAttribute="top" id="1jz-cd-Kxt"/>
+                            <constraint firstItem="T1B-u7-yEH" firstAttribute="leading" secondItem="Jww-0N-jta" secondAttribute="leading" constant="111" id="7eD-6w-azd"/>
                             <constraint firstItem="sYe-jv-HTO" firstAttribute="centerX" secondItem="J95-DM-Kzk" secondAttribute="centerX" id="CPY-4U-JRe"/>
-                            <constraint firstItem="sYe-jv-HTO" firstAttribute="top" secondItem="HOC-ab-XOw" secondAttribute="bottom" constant="20" id="Xfb-ON-Wvs"/>
-                            <constraint firstItem="sYe-jv-HTO" firstAttribute="top" secondItem="HOC-ab-XOw" secondAttribute="bottom" id="mFt-3E-Bkw"/>
+                            <constraint firstItem="sYe-jv-HTO" firstAttribute="top" secondItem="HOC-ab-XOw" secondAttribute="bottom" id="D54-sH-qh7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="T1B-u7-yEH" secondAttribute="bottom" constant="-24" id="FD9-d6-H7R"/>
                             <constraint firstItem="HOC-ab-XOw" firstAttribute="leading" secondItem="Jww-0N-jta" secondAttribute="leading" id="sR4-Sv-2Hp"/>
                             <constraint firstItem="HOC-ab-XOw" firstAttribute="trailing" secondItem="Jww-0N-jta" secondAttribute="trailing" id="ukG-GB-V86"/>
+                            <constraint firstItem="sYe-jv-HTO" firstAttribute="top" secondItem="J95-DM-Kzk" secondAttribute="top" constant="333" id="zgs-bD-5AI"/>
                         </constraints>
                     </view>
                     <connections>
